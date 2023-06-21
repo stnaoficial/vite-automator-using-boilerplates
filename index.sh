@@ -24,13 +24,13 @@ if [ "$PROJECT_TEMPLATE" == "vite+bootstrap" ]; then
 
     touch vite.config.js app.scss index.html;
 
-    VITE_CONFIG_BOILERPLATE=$(cat ../boilerplate/vite+bootstrap/vite.config.js);
+    VITE_CONFIG_BOILERPLATE=$(cat ../.boilerplate/vite+bootstrap/vite.config.js);
     printf "%b" "$VITE_CONFIG_BOILERPLATE" > vite.config.js;
 
-    APP_SCSS_BOILERPLATE=$(cat ../boilerplate/vite+bootstrap/app.scss);
+    APP_SCSS_BOILERPLATE=$(cat ../.boilerplate/vite+bootstrap/app.scss);
     printf "%b" "$APP_SCSS_BOILERPLATE" > app.scss;
 
-    HTML_BOILERPLATE=$(cat ../boilerplate/vite+bootstrap/index.html);
+    HTML_BOILERPLATE=$(cat ../.boilerplate/vite+bootstrap/index.html);
     printf "%b" "$HTML_BOILERPLATE" > index.html;
 
     yarn add bootstrap sass --dev;
